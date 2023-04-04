@@ -3,6 +3,10 @@ A vim theme based on my wallpaper
 
 [wallpaper here]
 
+A lot of stuff was stolen from https://github.com/shapeoflambda/dark-purple.vim
+and I used https://mswift42.github.io/themecreator/
+to make the themes
+
 
 # Installation
 
