@@ -1,91 +1,151 @@
-
-" corvus-purple.vim -- Vim color scheme.
-" Author:      Piet Marx
-" Webpage:     https://github.com/peit-uiberry/corvus-purple
-" Description: Vim theme based on my wallpaper
-
-set background=dark
-if version > 580
-	highlight clear
-	if exists("syntax_on")
-		syntax reset
-	endif
-endif
-
+" Vim color file
+" corvus-purple
+" Created by Piet Marx with ThemeCreator (https://github.com/mswift42/themecreator)
 
 hi clear
+
+if exists("syntax on")
 syntax reset
-let g:colors_name = "Corvus"
-set background=dark
+endif
+
 set t_Co=256
-hi Normal guifg=#5e71ac ctermbg=NONE guibg=#1f273d gui=NONE
-
-hi DiffText guifg=#a597da guibg=NONE
-hi ErrorMsg guifg=#a597da guibg=NONE
-hi WarningMsg guifg=#a597da guibg=NONE
-hi PreProc guifg=#a597da guibg=NONE
-hi Exception guifg=#a597da guibg=NONE
-hi Error guifg=#a597da guibg=NONE
-hi DiffDelete guifg=#a597da guibg=NONE
-hi GitGutterDelete guifg=#a597da guibg=NONE
-hi GitGutterChangeDelete guifg=#a597da guibg=NONE
-hi cssIdentifier guifg=#a597da guibg=NONE
-hi cssImportant guifg=#a597da guibg=NONE
-hi Type guifg=#a597da guibg=NONE
-hi Identifier guifg=#a597da guibg=NONE
-hi PMenuSel guifg=#f5efa0 guibg=NONE
-hi Constant guifg=#f5efa0 guibg=NONE
-hi Repeat guifg=#f5efa0 guibg=NONE
-hi DiffAdd guifg=#f5efa0 guibg=NONE
-hi GitGutterAdd guifg=#f5efa0 guibg=NONE
-hi cssIncludeKeyword guifg=#f5efa0 guibg=NONE
-hi Keyword guifg=#f5efa0 guibg=NONE
-hi IncSearch guifg=#6d83cf guibg=NONE
-hi Title guifg=#6d83cf guibg=NONE
-hi PreCondit guifg=#6d83cf guibg=NONE
-hi Debug guifg=#6d83cf guibg=NONE
-hi SpecialChar guifg=#6d83cf guibg=NONE
-hi Conditional guifg=#6d83cf guibg=NONE
-hi Todo guifg=#6d83cf guibg=NONE
-hi Special guifg=#6d83cf guibg=NONE
-hi Label guifg=#6d83cf guibg=NONE
-hi Delimiter guifg=#6d83cf guibg=NONE
-hi Number guifg=#6d83cf guibg=NONE
-hi CursorLineNR guifg=#6d83cf guibg=NONE
-hi Define guifg=#6d83cf guibg=NONE
-hi MoreMsg guifg=#6d83cf guibg=NONE
-hi Tag guifg=#6d83cf guibg=NONE
-hi String guifg=#6d83cf guibg=NONE
-hi MatchParen guifg=#6d83cf guibg=NONE
-hi Macro guifg=#6d83cf guibg=NONE
-hi DiffChange guifg=#6d83cf guibg=NONE
-hi GitGutterChange guifg=#6d83cf guibg=NONE
-hi cssColor guifg=#6d83cf guibg=NONE
-hi Function guifg=#5eb6b0 guibg=NONE
-hi Directory guifg=#ac5e71 guibg=NONE
-hi markdownLinkText guifg=#ac5e71 guibg=NONE
-hi javaScriptBoolean guifg=#ac5e71 guibg=NONE
-hi Include guifg=#ac5e71 guibg=NONE
-hi Storage guifg=#ac5e71 guibg=NONE
-hi cssClassName guifg=#ac5e71 guibg=NONE
-hi cssClassNameDot guifg=#ac5e71 guibg=NONE
-hi Statement guifg=#a173ad guibg=NONE
-hi Operator guifg=#a173ad guibg=NONE
-hi cssAttr guifg=#a173ad guibg=NONE
+let g:colors_name = "corvus-purple"
 
 
-hi Pmenu guifg=#5e71ac guibg=#192031
-hi SignColumn guibg=#1f273d
-hi Title guifg=#5e71ac
-hi LineNr guifg=#151a29 guibg=#1f273d
-hi NonText guifg=#796fa1 guibg=#1f273d
-hi Comment guifg=#796fa1 gui=italic
-hi SpecialComment guifg=#796fa1 gui=italic guibg=NONE
-hi CursorLine guibg=#192031
-hi TabLineFill gui=NONE guibg=#192031
-hi TabLine guifg=#151a29 guibg=#192031 gui=NONE
-hi StatusLine gui=bold guibg=#192031 guifg=#5e71ac
-hi StatusLineNC gui=NONE guibg=#1f273d guifg=#5e71ac
-hi Search guibg=#796fa1 guifg=#5e71ac
-hi VertSplit gui=NONE guifg=#192031 guibg=NONE
-hi Visual gui=NONE guibg=#192031
+" Define reusable colorvariables.
+let s:bg="#1f273d"
+let s:fg="#5e71ac"
+let s:fg2="#56689e"
+let s:fg3="#4f5f90"
+let s:fg4="#475683"
+let s:bg2="#31384d"
+let s:bg3="#434a5c"
+let s:bg4="#555b6c"
+let s:keyword="#a597da"
+let s:builtin="#7389ce"
+let s:const= "#61aa8d"
+let s:comment="#676d7f"
+let s:func="#8a74d1"
+let s:str="#9851cd"
+let s:type="#3e915f"
+let s:var="#a055b0"
+let s:warning="#ec2ba8"
+let s:warning2="#ec6e19"
+
+exe 'hi Normal guifg='s:fg' guibg='s:bg
+exe 'hi Cursor guifg='s:bg' guibg='s:fg
+exe 'hi CursorLine  guibg='s:bg2
+exe 'hi CursorLineNr guifg='s:str' guibg='s:bg
+exe 'hi CursorColumn  guibg='s:bg2
+exe 'hi ColorColumn  guibg='s:bg2
+exe 'hi LineNr guifg='s:fg2' guibg='s:bg2
+exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3
+exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
+exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
+exe 'hi PmenuSel  guibg='s:bg3
+exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
+exe 'hi Search   gui=underline'
+exe 'hi Directory guifg='s:const
+exe 'hi Folded guifg='s:fg4' guibg='s:bg
+exe 'hi WildMenu guifg='s:str' guibg='s:bg
+
+exe 'hi Boolean guifg='s:const
+exe 'hi Character guifg='s:const
+exe 'hi Comment guifg='s:comment
+exe 'hi Conditional guifg='s:keyword
+exe 'hi Constant guifg='s:const
+exe 'hi Todo guibg='s:bg
+exe 'hi Define guifg='s:keyword
+exe 'hi DiffAdd guifg=#fafafa guibg=#123d0f gui=bold'
+exe 'hi DiffDelete guibg='s:bg2
+exe 'hi DiffChange  guibg=#151b3c guifg=#fafafa'
+exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
+exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
+exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
+exe 'hi Float guifg='s:const
+exe 'hi Function guifg='s:func
+exe 'hi Identifier guifg='s:type'  gui=italic'
+exe 'hi Keyword guifg='s:keyword'  gui=bold'
+exe 'hi Label guifg='s:var
+exe 'hi NonText guifg='s:bg4' guibg='s:bg2
+exe 'hi Number guifg='s:const
+exe 'hi Operator guifg='s:keyword
+exe 'hi PreProc guifg='s:keyword
+exe 'hi Special guifg='s:fg
+exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
+exe 'hi Statement guifg='s:keyword
+exe 'hi StorageClass guifg='s:type'  gui=italic'
+exe 'hi String guifg='s:str
+exe 'hi Tag guifg='s:keyword
+exe 'hi Title guifg='s:fg'  gui=bold'
+exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
+exe 'hi Type guifg='s:type
+exe 'hi Underlined   gui=underline'
+
+" Neovim Terminal Mode
+let g:terminal_color_0 = s:bg
+let g:terminal_color_1 = s:warning
+let g:terminal_color_2 = s:keyword
+let g:terminal_color_3 = s:bg4
+let g:terminal_color_4 = s:func
+let g:terminal_color_5 = s:builtin
+let g:terminal_color_6 = s:fg3
+let g:terminal_color_7 = s:str
+let g:terminal_color_8 = s:bg2
+let g:terminal_color_9 = s:warning2
+let g:terminal_color_10 = s:fg2
+let g:terminal_color_11 = s:var
+let g:terminal_color_12 = s:type
+let g:terminal_color_13 = s:const
+let g:terminal_color_14 = s:fg4
+let g:terminal_color_15 = s:comment
+
+" Ruby Highlighting
+exe 'hi rubyAttribute guifg='s:builtin
+exe 'hi rubyLocalVariableOrMethod guifg='s:var
+exe 'hi rubyGlobalVariable guifg='s:var' gui=italic'
+exe 'hi rubyInstanceVariable guifg='s:var
+exe 'hi rubyKeyword guifg='s:keyword
+exe 'hi rubyKeywordAsMethod guifg='s:keyword' gui=bold'
+exe 'hi rubyClassDeclaration guifg='s:keyword' gui=bold'
+exe 'hi rubyClass guifg='s:keyword' gui=bold'
+exe 'hi rubyNumber guifg='s:const
+
+" Python Highlighting
+exe 'hi pythonBuiltinFunc guifg='s:builtin
+
+" Go Highlighting
+exe 'hi goBuiltins guifg='s:builtin
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_build_constraints      = 1
+let g:go_highlight_chan_whitespace_error  = 1
+let g:go_highlight_extra_types            = 1
+let g:go_highlight_fields                 = 1
+let g:go_highlight_format_strings         = 1
+let g:go_highlight_function_calls         = 1
+let g:go_highlight_function_parameters    = 1
+let g:go_highlight_functions              = 1
+let g:go_highlight_generate_tags          = 1
+let g:go_highlight_operators              = 1
+let g:go_highlight_space_tab_error        = 1
+let g:go_highlight_string_spellcheck      = 1
+let g:go_highlight_types                  = 1
+let g:go_highlight_variable_assignments   = 1
+let g:go_highlight_variable_declarations  = 1
+
+" Javascript Highlighting
+exe 'hi jsBuiltins guifg='s:builtin
+exe 'hi jsFunction guifg='s:keyword' gui=bold'
+exe 'hi jsGlobalObjects guifg='s:type
+exe 'hi jsAssignmentExps guifg='s:var
+
+" Html Highlighting
+exe 'hi htmlLink guifg='s:var' gui=underline'
+exe 'hi htmlStatement guifg='s:keyword
+exe 'hi htmlSpecialTagName guifg='s:keyword
+
+" Markdown Highlighting
+exe 'hi mkdCode guifg='s:builtin
+
+
