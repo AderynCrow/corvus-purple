@@ -13,13 +13,13 @@ This is a true color color scheme and a terminal that supports true colors is re
 
 ### Vim Plug
 ```vim
-Plug 'peit-uiberry/corvus-purple.vim'
+Plug 'peit-uiberry/corvus-purple'
 ```
 
 ### NeoBundle
 
 ```vim
-NeoBundle 'peit-uiberry/corvus-purple.vim'
+NeoBundle 'peit-uiberry/corvus-purple'
 ```
 
 ## Using the Colorscheme
