@@ -41,7 +41,7 @@ There's also a lightline theme that goes well with this theme. To use it, add th
 ```vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'peit-uiberry/corvus-purple.vim'
+Plug 'peit-uiberry/corvus-purple'
 Plug 'itchyny/lightline.vim'
 
 call plug#end()
