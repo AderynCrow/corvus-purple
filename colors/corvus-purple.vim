@@ -174,4 +174,4 @@ let s:p.normal.warning  = [ [ s:base023, s:yellow ] ]
 
 if exists("g:lightline")
   let g:lightline#colorscheme#dark_purple#palette = lightline#colorscheme#flatten(s:p)
-endif Lightline colors 
+endif
