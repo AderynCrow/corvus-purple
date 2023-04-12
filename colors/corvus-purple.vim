@@ -33,6 +33,7 @@ let s:var="#a055b0"
 let s:warning="#ec2ba8"
 let s:warning2="#ec6e19"
 let s:highlight="#4d6199"
+let s:highlightfg="#cfdbff"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
