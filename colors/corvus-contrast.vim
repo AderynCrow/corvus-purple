@@ -1,5 +1,5 @@
 " Vim color file
-" corvus-purple
+" corvus-read
 " Created by Piet Marx with ThemeCreator (https://github.com/mswift42/themecreator)
 
 hi clear
@@ -8,28 +8,27 @@ if exists("syntax on")
 syntax reset
 endif
 
-
 set t_Co=256
-let g:colors_name = "corvus-contrast"
+let g:colors_name = "corvus-read"
 
 
 " Define reusable colorvariables.
 let s:bg="#1f273d"
-let s:fg="#7d96e3"
-let s:fg2="#5773c9"
-let s:fg3="#90a0d1"
-let s:fg4="#657ab8"
+let s:fg="#e9eeff"
+let s:fg2="#d6dbeb"
+let s:fg3="#c4c8d6"
+let s:fg4="#b1b5c2"
 let s:bg2="#1f273d"
 let s:bg3="#434a5c"
 let s:bg4="#555b6c"
 let s:keyword="#a597da"
 let s:builtin="#7f97e3"
-let s:const= "#508f84"
+let s:const= "#7eccf6"
 let s:comment="#676d7f"
-let s:func="#73d1c1"
-let s:str="#9851cd"
+let s:func="#93e8f4"
+let s:str="#c488f1"
 let s:type="#d665c4"
-let s:var="#dc72f2"
+let s:var="#e396f3"
 let s:warning="#ec2ba8"
 let s:warning2="#ec6e19"
 
@@ -41,7 +40,7 @@ exe 'hi CursorColumn  guibg='s:bg2
 exe 'hi ColorColumn  guibg='s:bg2
 exe 'hi LineNr guifg='s:fg2' guibg='s:bg2
 exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3
-exe 'hi MatchParen guifg='s:fg3'  gui=underline'
+exe 'hi MatchParen guifg='s:warning2'  gui=underline'
 exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
 exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
 exe 'hi PmenuSel  guibg='s:bg3
@@ -118,6 +117,22 @@ exe 'hi pythonBuiltinFunc guifg='s:builtin
 
 " Go Highlighting
 exe 'hi goBuiltins guifg='s:builtin
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_build_constraints      = 1
+let g:go_highlight_chan_whitespace_error  = 1
+let g:go_highlight_extra_types            = 1
+let g:go_highlight_fields                 = 1
+let g:go_highlight_format_strings         = 1
+let g:go_highlight_function_calls         = 1
+let g:go_highlight_function_parameters    = 1
+let g:go_highlight_functions              = 1
+let g:go_highlight_generate_tags          = 1
+let g:go_highlight_operators              = 1
+let g:go_highlight_space_tab_error        = 1
+let g:go_highlight_string_spellcheck      = 1
+let g:go_highlight_types                  = 1
+let g:go_highlight_variable_assignments   = 1
+let g:go_highlight_variable_declarations  = 1
 
 " Javascript Highlighting
 exe 'hi jsBuiltins guifg='s:builtin
@@ -133,45 +148,4 @@ exe 'hi htmlSpecialTagName guifg='s:keyword
 " Markdown Highlighting
 exe 'hi mkdCode guifg='s:builtin
 
-"" Lightline colors
-let s:base03   = [ '#ffffff', 235 ]
-let s:base023  = [ '#383540', 236 ]
-let s:base02   = [ '#eaebec', 238 ]
-let s:base04   = [ '#282840', 238 ]
-let s:base01   = [ '#2c263a', 240 ]
-let s:base00   = [ '#6F6A80', 242  ]
-let s:base0    = [ '#443b5c', 244 ]
-let s:base1    = [ '#d0d0d9', 247 ]
-let s:base2    = [ '#a8a8a8', 248 ]
-let s:base3    = [ '#d0d0d9', 252 ]
-let s:base4    = [ '#111212', 252 ]
-let s:yellow   = [ '#E3FF91', 180 ]
-let s:orange   = [ '#CC2B28', 173 ]
-let s:red      = [ '#CC6C6A', 203 ]
-let s:magenta  = [ '#505080', 216 ]
-let s:magenta1 = [ '#676EE6', 216 ]
-let s:blue     = [ '#4765B1', 117 ]
-let s:cyan     = s:blue
-let s:green    = [ '#78B366', 119 ]
 
-let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
-
-let s:p.normal.left     = [ [ s:base02, s:magenta1 ], [ s:base02, s:magenta ] ]
-let s:p.normal.right    = [ [ s:base4, s:base00 ], [ s:base2, s:base023 ] ]
-let s:p.inactive.right  = [ [ s:base4, s:base00 ], [ s:base02, s:base04 ] ]
-let s:p.inactive.left   = [ [ s:base1, s:base04 ], [ s:base00, s:base023 ] ]
-let s:p.insert.left     = [ [ s:base4, s:green ], [ s:base02, s:magenta ] ]
-let s:p.replace.left    = [ [ s:base02, s:orange ], [ s:base02, s:magenta ] ]
-let s:p.visual.left     = [ [ s:base02, s:red ], [ s:base02, s:magenta ] ]
-let s:p.normal.middle   = [ [ s:base2, s:base04 ] ]
-let s:p.inactive.middle = [ [ s:base1, s:base023 ] ]
-let s:p.tabline.left    = [ [ s:base2, s:base04 ] ]
-let s:p.tabline.tabsel  = [ [ s:base02, s:magenta1 ] ]
-let s:p.tabline.middle  = [ [ s:base2, s:base04 ] ]
-let s:p.tabline.right   = [ [ s:base4, s:base00 ] ]
-let s:p.normal.error    = [ [ s:base02, s:orange ] ]
-let s:p.normal.warning  = [ [ s:base023, s:yellow ] ]
-
-if exists("g:lightline")
-  let g:lightline#colorscheme#dark_purple#palette = lightline#colorscheme#flatten(s:p)
-endif
