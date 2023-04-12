@@ -32,6 +32,7 @@ let s:type="#a64697"
 let s:var="#a055b0"
 let s:warning="#ec2ba8"
 let s:warning2="#ec6e19"
+let s:highlight="#4d6199"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
@@ -50,6 +51,7 @@ exe 'hi Search   gui=underline'
 exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
+exe 'hi Visual guifg='s:fg' guibg='s:highlight
 
 exe 'hi Boolean guifg='s:const
 exe 'hi Character guifg='s:const
