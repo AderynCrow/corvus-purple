@@ -52,7 +52,7 @@ exe 'hi Search   gui=underline'
 exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
-exe 'hi Visual guifg='s:fg' guibg='s:highlight
+exe 'hi Visual guifg='s:highlightfg' guibg='s:highlight
 
 exe 'hi Boolean guifg='s:const
 exe 'hi Character guifg='s:const
